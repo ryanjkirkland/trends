@@ -57,12 +57,15 @@ var curcumin = googleTrends.interestOverTime({keyword: keyword, startTime: new D
   	seven = seven + last_week[i]["value"][0];
   }
 
+  //Calculate 7 day average
   var last_week_average = seven/7;
   console.log(last_week_average);
 
+  //Create array out of multi-word single keyword phrases
   var keyword_array = keyword.split(" ");
   console.log(keyword_array);
 
+  //connect keyword phrases with syntax for adding to link to Google Trends Page
   if (keyword_array.length > 1) {
   	keyword = keyword_array.join("%20");
   	console.log(keyword);
